@@ -97,10 +97,7 @@ nav {
 nav a {
   text-decoration: none;
 }
-nav a:hover {
-  background-color: #ffe066;
-  color: #000;
-}
+
 .logo:hover nav {
   opacity: 1;
   
