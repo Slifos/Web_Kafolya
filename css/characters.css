@@ -1,0 +1,163 @@
+@font-face {
+  font-family: 'BattleKafolyaFont';
+  src: 
+       url('../font/RacingSansOne-Regular.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+body {
+  font-family: Racing ,Sans One;
+  background: url('../data/fond.png') no-repeat center center fixed;
+  background-size: cover;
+}
+#breez,
+#peaceguin,
+#chobushi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #001bb3;
+  border-radius: 18px;
+  padding: 20px 32px 20px 20px;
+  position: relative;
+  width: 45%;
+  margin: 32px auto;
+  min-width: 120px;
+  max-width: 100%;
+  padding-top: 80px;
+  
+  transition:
+    width 0.5s cubic-bezier(.4,2,.6,1),
+    box-shadow 0.3s,
+    background 0.5s cubic-bezier(.4,2,.6,1); /* Ajoute la transition sur le background */
+
+  min-height: 60vh; /* <-- Ajouté ici */
+}
+
+#breez:hover,
+#peaceguin:hover,
+#chobushi:hover {
+  width: 100%;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  opacity:1;
+  /* PAS de transition ici */
+}
+
+
+#breez img,
+#peaceguin img,
+#chobushi img {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+.bouton1 {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ou flex-start si tu veux aligner à gauche */
+  gap: 18px;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.para1 {
+  font-family: 'BattleKafolyaFont', Arial, sans-serif;
+  font-size: 2vw;
+  color:white;
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+  width: 40%;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.1s;
+  z-index: 2;
+}
+.bouton1 button {
+  background: linear-gradient(90deg, #001bb3 60%, #003cff 100%);
+  color: #fff;
+  font-family: 'BattleKafolyaFont', Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 32px;
+  margin: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.bouton1 button:hover,
+.bouton1 button:focus {
+  background: linear-gradient(90deg, #003cff 60%, #001bb3 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+
+#breez:hover .bouton1, #breez:hover .para1,
+#peaceguin:hover .bouton1, #peaceguin:hover .para1,
+#chobushi:hover .bouton1, #chobushi:hover .para1 {
+  opacity: 1; /* Les boutons et le texte deviennent visibles au survol */
+  transition: opacity 0.3s ease-in-out; /* Transition pour l'apparition */
+}
+#breez img {
+  height:50vh;
+}
+#peaceguin img {
+  height:50vh;
+}
+#chobushi img {
+  height:50vh;
+}
+#breez h1,
+#peaceguin h1,
+#chobushi h1 {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  width: max-content;
+  color: #fff;
+  font-family: 'BattleKafolyaFont', Arial, sans-serif;
+  font-size: 2.5em;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 100px;
+  pointer-events: none; 
+}
+#breez:hover {
+  background: #7b1fa2; 
+}
+#peaceguin:hover {
+  background: #00c3ff; 
+}
+#chobushi:hover {
+  background: #407000; 
+}
+.centered-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+  background: #001bb3;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  padding: 16px;
+  display: none;
+}
