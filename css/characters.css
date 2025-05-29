@@ -38,7 +38,8 @@ body {
 #breez:hover,
 #peaceguin:hover,
 #chobushi:hover {
-  width: 100%;
+  width: 95vw;         /* Ne dépasse jamais la largeur de la fenêtre */
+  max-width: 95vw;
   box-shadow: 0 4px 24px rgba(0,0,0,0.15);
   opacity:1;
   /* PAS de transition ici */
@@ -68,14 +69,14 @@ body {
 
 .para1 {
   font-family: 'BattleKafolyaFont', Arial, sans-serif;
-  font-size: 2vw;
+  font-size: 1.5vw;
   color:white;
   position: absolute;
   right: 32px;
   top: 50%;
   transform: translateY(-50%);
   text-align: right;
-  width: 40%;
+  width: 30%;
   margin: 0;
   opacity: 0;
   transition: opacity 0.1s;
