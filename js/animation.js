@@ -1,83 +1,34 @@
-const breezFrameCount = 4;
-const breezPath = "../data/breez/breez";
-let breezFrame = 1;
-const breezImg = document.getElementById("breez-anim");
+function animateCharacter(imgId, frameCount, path, interval = 150, hoverSelector = null, hoverSpeed = 60) {
+  const img = document.getElementById(imgId);
+  if (!img) return;
+  let frame = 1;
+  let timer = null;
 
-let interval = 150;
-let timer = null;
+  function animate() {
+    frame = frame % frameCount + 1;
+    img.src = `${path}${frame}.png`;
+  }
 
-function animateBreez() {
-  breezFrame = breezFrame % breezFrameCount + 1;
-  breezImg.src = `${breezPath}${breezFrame}.png`;
+  function start(speed) {
+    clearInterval(timer);
+    timer = setInterval(animate, speed);
+  }
+
+  start(interval);
+
+  if (hoverSelector) {
+    const section = document.getElementById(hoverSelector);
+    if (section) {
+      section.addEventListener("mouseenter", () => start(hoverSpeed));
+      section.addEventListener("mouseleave", () => start(interval));
+    }
+  }
 }
 
-function startAnimation(speed, who) {
-  clearInterval(timer);
-  timer = setInterval(who, speed);
-}
+// Pour character.html
+animateCharacter("breez-anim", 4, "../data/breez/breez", 150, "breez");
+animateCharacter("peaceguin-anim", 6, "../data/peaceguin/peaceguin", 150, "peaceguin");
+animateCharacter("chobushi-anim", 4, "../data/chobushi/chobushi", 150, "chobushi");
 
-startAnimation(interval);
-
-const breezSection = document.getElementById("breez");
-breezSection.addEventListener("mouseenter", () => {
-  startAnimation(60, animateBreez);
-});
-breezSection.addEventListener("mouseleave", () => {
-  startAnimation(interval, animateBreez);
-});
-
-const peaceguinFrameCount = 6;
-const peaceguinPath = "../data/peaceguin/peaceguin";
-let peaceguinFrame = 1;
-const peaceguinImg = document.getElementById("peaceguin-anim");
-
-let peaceguinInterval = 150;
-let peaceguinTimer = null;
-
-function animatePeaceguin() {
-  peaceguinFrame = peaceguinFrame % peaceguinFrameCount + 1;
-  peaceguinImg.src = `${peaceguinPath}${peaceguinFrame}.png`;
-}
-
-function startPeaceguinAnimation(speed) {
-  clearInterval(peaceguinTimer);
-  peaceguinTimer = setInterval(animatePeaceguin, speed);
-}
-
-startPeaceguinAnimation(peaceguinInterval);
-
-const peaceguinSection = document.getElementById("peaceguin");
-peaceguinSection.addEventListener("mouseenter", () => {
-  startPeaceguinAnimation(60);
-});
-peaceguinSection.addEventListener("mouseleave", () => {
-  startPeaceguinAnimation(peaceguinInterval);
-});
-
-const chobushiFrameCount = 4;
-const chobushiPath = "../data/chobushi/chobushi";
-let chobushiFrame = 1;
-const chobushiImg = document.getElementById("chobushi-anim");
-
-let chobushiInterval = 150;
-let chobushiTimer = null;
-
-function animateChobushi() {
-  chobushiFrame = chobushiFrame % chobushiFrameCount + 1;
-  chobushiImg.src = `${chobushiPath}${chobushiFrame}.png`;
-}
-
-function startChobushiAnimation(speed) {
-  clearInterval(chobushiTimer);
-  chobushiTimer = setInterval(animateChobushi, speed);
-}
-
-startChobushiAnimation(chobushiInterval);
-
-const chobushiSection = document.getElementById("chobushi");
-chobushiSection.addEventListener("mouseenter", () => {
-  startChobushiAnimation(60);
-});
-chobushiSection.addEventListener("mouseleave", () => {
-  startChobushiAnimation(chobushiInterval);
-});
+// Pour main.html (pas de hover)
+animateCharacter("breez-anim-main", 4, "../data/breez/breez");
