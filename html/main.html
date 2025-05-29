@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Battle Kafolya</title>
+  <title>Kafolya</title>
   <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/main.css"/>
   <link rel="icon" href="../data/LogoKafo.png" type="image/png">
 </head>
 <body>
@@ -27,23 +28,42 @@
   </header>
 
   <main>
-    
-
-    
-
-    <section class="repeat-hero">
-      <h2>A Smash Game like you’ve never seen before.</h2>
+    <h2>Welcome to Kafolya</h2>
+    <section id="first">
+      <button class="scroll-bottom" onclick="goDown();playSound2()">Jouer</button>
     </section>
+
+    
+    <section id="second">
+  <h2>Un jeu style "Smash" original</h2>
+  <div id="second-content">
+    <div id="personnage">
+      <img src="../data/CadreBleu.png" alt="cadre">
+      <img id="breez-anim-main" src="../data/breez/breez1.png" alt="Breez Animation Main" />
+    </div>
+    <p>Plongez dans l’univers unique de Kafolya, dans le même genre que smash. 
+        Découvrez des personnages originaux, des mécaniques innovantes et des arènes dynamiques où chaque partie est différente.
+      Que vous soyez un joueur compétitif ou que vous cherchiez simplement à vous amuser entre amis,
+       Kafolya offre une expérience accessible, fun et pleine de surprises.</p>
+  </div>
+
+    
   </main>
 
   <footer>
     
     <div class="footer-info">
-      <a class="bouton" href="../kafolya demo.zip">Download</a>
+      <a class="bouton" href="https://drive.google.com/file/d/1e9Z7b7dwRdMJnXc3cZTTrdaogQ5nccP7/view?usp=sharing" target="_blank" onclick="playSound1()">Download</a>
       <p>Copyright © Kafolya 2024-2025</p>
-      <a href="apropos.html">À propos</a>
+      <a class="bouton" href="apropos.html">À propos</a>
     </div>
   </footer>
+  <video id="background-video" autoplay loop muted playsinline>
+  <source src="../data/fondVideo.mp4" type="video/mp4">
+  
+</video>
   <script src="../js/function.js"></script>
+  <script src="../js/animation.js"></script>
+  
 </body>
 </html>

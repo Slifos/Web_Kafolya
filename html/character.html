@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Battle Kafolya</title>
+  <title>Kafolya</title>
   <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/characters.css"/>
   <link rel="icon" href="../data/LogoKafo.png" type="image/png">
 </head>
 <body>
@@ -27,26 +28,81 @@
       <a href="#">Character</a>
     </nav>
   </header>
+  <div id="character">
   <section id="breez">
-    <img id="breez-anim" src="../data/breez/breez1.png" alt="Breez Animation" />
+  <h1>Breez</h1>
+  <div class="bouton1">
+    <button onclick="playVideo('auto-breez')">auto</button>
+    <button onclick="playVideo('GBDF-breez')">Ability 1</button>
+    <button onclick="playVideo('aire-breez')">Ability 2</button>
+  </div>
+  <img id="breez-anim" src="../data/breez/breez1.png" alt="Breez Animation" />
+  <p class="para1">Breez est un personnage longue distance, qui demande à la fois de savoir visé tout en gardant sa distance avec l'ennemi.
+      Il est un personnage technique, au début mais qui devient facile quand on a les bons reprères</p>
   </section>
   
   <section id="peaceguin">
-    <section id="peaceguin">
+    <h1>Peaceguin</h1>
+    <div class="bouton1">
+    <button onclick="playVideo('peaceguin-auto')">auto</button>
+    <button onclick="playVideo('peaceguin-wall')">Ability 1</button>
+    <button onclick="playVideo('peaceguin-dash')">Ability 2</button>
+  </div>
+    
   <img id="peaceguin-anim" src="../data/peaceguin/peaceguin1.png" alt="Peaceguin Animation" />
+  <p class="para1">Peaceguin est un personnage de mêlée qui hésiteras pas à utiliser son mur et son gros corps afin d'intercepté les attaques pour mieux se rapprocher.
+      Il propose un gameplay fluide tout en permettant l'erreur pour les débutants.
+    </p>
+  
 </section>
   </section>
   <section id="chobushi">
+    <h1>Chobushi</h1>
+    <div class="bouton1">
+    <button onclick="playVideo('chobushi-auto')">auto</button>
+    <button onclick="playVideo('chobushi-launch')">Ability 1</button>
+    <button onclick="playVideo('chobushi-contre')">Ability 2</button>
+  </div>
   <img id="chobushi-anim" src="../data/chobushi/chobushi1.png" alt="Chobushi Animation" />
+  <p class="para1">Chobushi est le personnage le plus mobile, il possède de nombreuses capacités qui lui permet de destabiliser l'ennemi tout en se déplacant.
+    Il est le personnage le plus difficile à maîtriser, mais il est très gratifiant de le jouer.
+    </p>
 </section>
-  
+</div>
+  <video id="auto-breez" class="centered-video" controls style="display:none;" width="75%">
+  <source src="../data/tuto/breez-auto.mp4" type="video/mp4">
+</video>
+<video id="GBDF-breez" class="centered-video" controls style="display:none;" width="75%">
+  <source src="../data/tuto/breez-GBDF.mp4" type="video/mp4">
+</video>
+<video id="aire-breez" class="centered-video" controls style="display:none;" width="75%">
+  <source src="../data/tuto/breez-aire.mp4" type="video/mp4">
+</video>
+<video id="peaceguin-auto" class="centered-video" controls style="display:none;" width="75%">
+  <source src="../data/tuto/peaceguin-auto.mp4" type="video/mp4">
+</video>
+<video id="peaceguin-wall" class="centered-video" controls style="display:none;" width="75%">
+  <source src="../data/tuto/peaceguin-wall.mp4" type="video/mp4">
+</video>
+<video id="peaceguin-dash" class="centered-video" controls style="display:none;" width="75%">
+  <source src="../data/tuto/peaceguin-dash.mp4" type="video/mp4">
+</video>
+<video id="chobushi-auto" class="centered-video" controls style="display:none;" width="75%">
+  <source src="../data/tuto/chobushi-auto.mp4" type="video/mp4">
+</video>
+<video id="chobushi-launch" class="centered-video" controls style="display:none;" width="75%">
+  <source src="../data/tuto/chobushi-launch.mp4" type="video/mp4">
+</video>
+<video id="chobushi-contre" class="centered-video" controls style="display:none;" width="75%">
+  <source src="../data/tuto/chobushi-contre.mp4" type="video/mp4">
+</video>
 
   <footer>
     
     <div class="footer-info">
       <a class="bouton" href="../kafolya demo.zip">Download</a>
       <p>Copyright © Kafolya 2024-2025</p>
-      <a href="apropos.html">À propos</a>
+      <a class="bouton" href="apropos.html">À propos</a>
     </div>
   </footer>
   <script src="../js/function.js"></script>
