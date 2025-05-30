@@ -10,7 +10,7 @@ function playSound1(){
   clickSound.play(); // Réinitialiser le son
 }
 function playSound2(){
-  const clickSound = new Audio('../data/pressed.mp3');
+  const clickSound = new Audio('..  /data/pressed.mp3');
   clickSound.currentTime = 0;
   clickSound.play(); // Réinitialiser le son
 }

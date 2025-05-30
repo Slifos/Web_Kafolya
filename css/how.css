@@ -41,6 +41,7 @@ body {
   margin: 0;
   padding: 0 10px;
   text-align: center;
+  font-family:'BattleKafolyaFont', sans-serif;
 }
 
 .card {
@@ -63,6 +64,7 @@ body {
   margin-bottom: 14px;
   font-size: 1.5rem;
   text-align: center;
+  font-family:'BattleKafolyaFont', sans-serif;
 }
 .card:hover, #debut:hover {
   
@@ -73,6 +75,7 @@ body {
     box-shadow: 0 0 10px 13px rgba(0,0,0,0.3);
 }
 .card p{
+    font-family: 'battleKafolyaFont', sans-serif;
   order: 2;
   color: #222;
   font-size: 1.08rem;
