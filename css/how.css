@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'BattleKafolyaFont';
+  src: 
+       url('../font/RacingSansOne-Regular.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+body {
+  font-family: Racing ,Sans One;
+  background: url('../data/fond.png') no-repeat center center fixed;
+  background-size: cover;
+}
+#debut {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#debut img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  z-index: 1;
+}
+
+#debut h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-shadow: 2px 2px 8px #000;
+  margin: 0;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255,255,255,0.85);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  padding: 28px 22px;
+  margin: 32px auto;
+  max-width: 700px;
+  width: 90%;
+  position: relative;
+  z-index: 5;
+}
+
+.card h2 {
+  order: 1;
+  color: #2a7ae2;
+  margin-bottom: 14px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.card:hover, #debut:hover {
+  
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+.card:hover{
+    box-shadow: 0 0 10px 13px rgba(0,0,0,0.3);
+}
+.card p{
+  order: 2;
+  color: #222;
+  font-size: 1.08rem;
+  margin-bottom: 10px;
+}
+

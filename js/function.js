@@ -14,8 +14,17 @@ function playSound2(){
   clickSound.currentTime = 0;
   clickSound.play(); // Réinitialiser le son
 }
-
-
+function playMusic(){
+  const clickSound = new Audio('../data/best-adventure.mp3');
+  clickSound.currentTime = 0;
+  clickSound.play(); // Réinitialiser le son
+}
+document.addEventListener('DOMContentLoaded', function() {
+  const debut = document.getElementById('debut');
+  if (debut) {
+    debut.addEventListener('click', playMusic);
+  }
+});
 function playVideo(type) {
   const allVideos = document.querySelectorAll('video');
   allVideos.forEach(video => {
