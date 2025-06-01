@@ -83,3 +83,11 @@ body {
   margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+  #debut h1 {
+    font-size: 1.4em;
+    padding: 0 5vw;
+    max-width: 90vw;
+    line-height: 1.4;
+  }
+}
