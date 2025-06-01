@@ -1,4 +1,4 @@
-function animateCharacter(imgId, frameCount, path, interval = 150, hoverSelector = null, hoverSpeed = 60) {
+function animateCharacter(imgId, frameCount, path, interval = 300, hoverSelector = null, hoverSpeed =80) {
   const img = document.getElementById(imgId);
   if (!img) return;
   let frame = 1;
@@ -25,10 +25,10 @@ function animateCharacter(imgId, frameCount, path, interval = 150, hoverSelector
   }
 }
 
-// Pour character.html
+
 animateCharacter("breez-anim", 4, "../data/breez/breez", 150, "breez");
 animateCharacter("peaceguin-anim", 6, "../data/peaceguin/peaceguin", 150, "peaceguin");
 animateCharacter("chobushi-anim", 4, "../data/chobushi/chobushi", 150, "chobushi");
 
-// Pour main.html (pas de hover)
+
 animateCharacter("breez-anim-main", 4, "../data/breez/breez");

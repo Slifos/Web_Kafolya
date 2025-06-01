@@ -7,12 +7,12 @@ function goDown(){
 function playSound1(){
   const clickSound = new Audio('../data/click sound.mp3');
   clickSound.currentTime = 0;
-  clickSound.play(); // Réinitialiser le son
+  clickSound.play(); 
 }
 function playSound2(){
   const clickSound = new Audio('..  /data/pressed.mp3');
   clickSound.currentTime = 0;
-  clickSound.play(); // Réinitialiser le son
+  clickSound.play(); 
 }
 let musicAudio = null;
 
@@ -77,9 +77,9 @@ function playVideo(type) {
     Video.style.display = 'block';
     Video.currentTime = 0;
     Video.play();
-    Video.controls = false; // Vidéo non modifiable
+    Video.controls = false; 
 
-    // Quand la vidéo se termine, on la masque
+    
     Video.onended = function() {
       Video.style.display = 'none';
     };
