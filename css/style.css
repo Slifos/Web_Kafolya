@@ -52,7 +52,7 @@ header {
 
 .logo h1 {
   font-family: 'BattleKafolyaFont', Arial Black, sans-serif;
-  font-size: 1.5vw;
+  font-size: 1.5em;
   font-style: italic;
   font-weight: bold;
   color: white;
@@ -62,7 +62,8 @@ header {
 
 .logo nav {
   font-family: 'BattleKafolyaFont', Arial Black, sans-serif;
-  font-size: 1.5vw;
+  
+  font-size: 1.5em;
   font-style: italic;
   font-weight: bold;
   position: absolute;
