@@ -1,26 +1,25 @@
 @font-face {
   font-family: 'BattleKafolyaFont';
-  src: 
-       url('../font/RacingSansOne-Regular.ttf') format('truetype');
+  src: url('../font/RacingSansOne-Regular.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
 }
+
 #background-video {
   position: fixed;
   top: 0;
   left: 0;
-  
   min-height: 100vh;
   min-width: 100vw;
   width: auto;
-  height:auto;
-  
+  height: auto;
   z-index: -1;
   object-fit: cover;
-  opacity: 0.7; /* ajuste l'opacité si besoin */
+  opacity: 0.7;
   pointer-events: none;
-  margin-top: 0; /* pour que la vidéo ne bloque pas les clics */
+  margin-top: 0;
 }
+
 h2 {
   color: #fff;
   font-family: 'BattleKafolyaFont', Arial, sans-serif;
@@ -31,20 +30,21 @@ h2 {
   margin: 40px 0 24px 0;
   text-align: center;
 }
+
 section {
   min-height: 80vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* centre verticalement le contenu */
-   /* optionnel, pour voir le fond vidéo */
+  justify-content: center;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   position: relative;
   border-radius: 12px;
 }
+
 .scroll-bottom {
   background: linear-gradient(90deg, #001bb3 60%, #7b1fa2 100%);
   color: #fff;
@@ -66,11 +66,12 @@ section {
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(0,0,0,0.22);
 }
+
 #second {
   min-height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column;      /* Colonne pour empiler h2 et le reste */
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   box-sizing: border-box;
@@ -88,15 +89,14 @@ section {
   width: 100%;
 }
 
-/* Nouveau conteneur pour image + texte */
 #second-content {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between; /* Espace maximal entre image et texte */
-  width: 90vw;                   /* Prend presque toute la largeur de la fenêtre */
-  max-width: 1600px;             /* Limite sur très grands écrans */
-  margin: 0 auto;                /* Centre le bloc dans la section */
+  justify-content: space-between;
+  width: 90vw;
+  max-width: 1600px;
+  margin: 0 auto;
   gap: 48px;
 }
 
@@ -133,11 +133,55 @@ section {
   max-width: 700px;
   backdrop-filter: blur(2px);
   flex: 1 1 0;
-  margin-left: 48px; /* espace entre l'image et le texte */
-  max-width: 700px;
+  margin-left: 48px;
 }
 
 html, body {
   width: 100%;
   overflow-x: hidden;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2em;
+    margin: 20px 0;
+  }
+
+  .scroll-bottom {
+    font-size: 1.4em;
+    padding: 12px 24px;
+  }
+
+  #second-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  #personnage {
+  width: 100%;
+  max-width: 80vw;
+  height: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#personnage img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+  #second p {
+    font-size: 1.1em;
+    margin-left: 0;
+    margin-top:30vh;
+    padding: 16px 20px;
+    width: 90vw;
+  }
 }
