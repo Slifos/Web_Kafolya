@@ -29,4 +29,4 @@ function animateCharacter(imgId, frameCount, path, interval = 300, hoverSelector
 animateCharacter("breez-anim", 4, "../data/breez/breez", 150, "breez");
 animateCharacter("peaceguin-anim", 6, "../data/peaceguin/peaceguin", 150, "peaceguin");
 animateCharacter("chobushi-anim", 4, "../data/chobushi/chobushi", 150, "chobushi");
-animateCharacter("breez-anim-main", 4, "../data/breez/breez");
+animateCharacter("breez-anim-main", 4, "data/breez/breez",150,);
